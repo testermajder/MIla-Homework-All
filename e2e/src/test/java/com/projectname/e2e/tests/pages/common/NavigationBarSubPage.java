@@ -29,7 +29,7 @@ public class NavigationBarSubPage {
 
     private WebElement getUserProfileButton() {
         try {
-            return driver.findElement(CustomBy.testAutomationId("userProfileButton"));
+            return driver.findElement(CustomBy.xpath("/html/body/header/div/nav/a[4]"));
         } catch (Exception e) {
             e.printStackTrace();
             throw new AssertionError("Could not find user profile button on navigation bar", e);
@@ -38,7 +38,7 @@ public class NavigationBarSubPage {
 
     private WebElement getLogoutButton() {
         try {
-            return driver.findElement(CustomBy.testAutomationId("logOutButton"));
+            return driver.findElement(CustomBy.xpath("//*[@id=\"Secondary_Navbar-Account-Logout\"]/a"));
         } catch (Exception e) {
             e.printStackTrace();
             throw new AssertionError("Could not find logout button in user profile dropdown", e);

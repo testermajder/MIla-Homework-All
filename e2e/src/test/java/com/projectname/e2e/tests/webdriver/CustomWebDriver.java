@@ -23,7 +23,9 @@ public class CustomWebDriver implements WebDriver, JavascriptExecutor, TakesScre
 
     public CustomWebDriver(WebDriver driver, long timeOutInSeconds, long sleepInMillis) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, timeOutInSeconds, sleepInMillis);
+        this.wait = new WebDriverWait(driver,
+                timeOutInSeconds,
+                sleepInMillis);
     }
 
     @Override
